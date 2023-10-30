@@ -1,5 +1,5 @@
 #!/bin/bash
-# Aufgabe 2
+# Aufgabe 2 Skript
 if [ -z "$1" ]
 then
   echo "Fehlender Parameter"
