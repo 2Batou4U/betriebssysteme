@@ -7,7 +7,7 @@ unsigned int guess_the_number(void)
     unsigned int ub = 99999; // Wir setzen eine obere Schranke auf 99999, da dies der maximale Code sein kann.
     unsigned int lb = 0; // Wir setzen die untere Schranke auf 0.
 
-    unsigned int combination; // Variable zum Finden der Mitte zwischen ub und lb.
+    unsigned int combination; // Variable zum Finden der Mitte zwischen ub und lb gemäß binärer Suche.
     int eval; // Variable, die im Folgenden zum Aufrufen von evaluate genutzt wird.
 
     do {
@@ -25,7 +25,7 @@ unsigned int guess_the_number(void)
     return combination; // Hierhin kommen wir nur, wenn eval = 0 ist und somit wenn combination der gesuchten Zahl entspricht. combination wird also ausgegeben.
 }
 
-unsigned int bogo_the_number(void)
+unsigned int bogo_the_number(void) // Bogo-Sort zum Testen, wie schlecht dieser Sortieralgorithmus funktioniert. :D
 {
     unsigned int combination;
     int eval;
