@@ -3,19 +3,20 @@
 
 unsigned int guess_the_number(void)
 {
-    unsigned int ub = 99999;
-    unsigned int lb = 0;
+    // Implementierung einer binären Suche.
+    unsigned int ub = 99999; // Wir setzen eine obere Schranke auf 99999, da dies der maximale Code sein kann.
+    unsigned int lb = 0; // Wir setzen die untere Schranke auf 0.
 
-    unsigned int combination;
-    int eval;
+    unsigned int combination; // Variable zum Finden der Mitte zwischen ub und lb.
+    int eval; // Variable, die im Folgenden zum Aufrufen von evaluate genutzt wird.
 
     do {
         combination = (lb + ub) / 2;
-        eval = evaluate(combination);
+        eval = evaluate(combination); // Wir evaluieren, ob die Mitte zwischen lb und ub die gesuchte Zahl ist.
 
-        if (eval == 1) {
+        if (eval == 1) { // Wenn sie größer ist, als die gesuchte Zahl, wird die untere Grenze auf die combination gesetzt, da die gesuchte Zahl ja auf keinen Fall kleiner sein kann.
             lb = combination;
-        } else if (eval == -1) {
+        } else if (eval == -1) { 
             ub = combination;
         }
 
