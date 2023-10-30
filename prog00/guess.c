@@ -14,15 +14,15 @@ unsigned int guess_the_number(void)
         combination = (lb + ub) / 2;
         eval = evaluate(combination); // Wir evaluieren, ob die Mitte zwischen lb und ub die gesuchte Zahl ist.
 
-        if (eval == 1) { // Wenn sie größer ist, als die gesuchte Zahl, wird die untere Grenze auf die combination gesetzt, da die gesuchte Zahl ja auf keinen Fall kleiner sein kann.
+        if (eval == 1) { // Wenn sie größer ist als die gesuchte Zahl, wird die untere Grenze auf die combination gesetzt, da die gesuchte Zahl ja auf keinen Fall kleiner sein kann.
             lb = combination;
-        } else if (eval == -1) { 
+        } else if (eval == -1) { // Wenn sie kleiner ist als die gesuchte Zahl, wird die obere Grenze angepasst.
             ub = combination;
         }
 
-    } while (eval != 0);
+    } while (eval != 0); // Wenn eval 0 ist, enstpricht combination der gesuchten Zahl und wir beenden die Schleife.
 
-    return combination;
+    return combination; // Hierhin kommen wir nur, wenn eval = 0 ist und somit wenn combination der gesuchten Zahl entspricht. combination wird also ausgegeben.
 }
 
 unsigned int bogo_the_number(void)
